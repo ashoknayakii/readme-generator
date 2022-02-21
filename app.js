@@ -1,8 +1,8 @@
-const generateReadMe = () => {
+const fs = require('fs');
+const generateReadMe = (Project, Description) => {
     return `
     
-# Project Title    
-${Project}
+#${Project}
 
 ## Description
 ${Description}
@@ -25,3 +25,9 @@ ${Tasks}
 <a href="https://github.com/${github}/${repo}.git>
     `
 }
+
+fs.writeFile('index.html', generateReadMe(Project, Description), err => {
+    if (err) throw err;
+  
+console.log('Portfolio complete! Check out index.html to see the output!');
+});
