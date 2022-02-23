@@ -1,33 +1,44 @@
 const fs = require('fs');
-const generateReadMe = (Project, Description) => {
-    return `
-    
-#${Project}
+const inquirer = require('inquirer');
+const generateReadMe = require ('./src/page-template.js');
 
-## Description
-${Description}
-
-## Programming Languages
-${Languages}
-
-## Installation
-${Installation}
-
-## Tasks Accomplished
-${Tasks}
-
-
-### URL of the deployed application (GitHub Pages):
-<a href="https://${github}.github.io/${repo}
-
-
-### URL of the GitHub repository:
-<a href="https://github.com/${github}/${repo}.git>
-    `
+const promptUser = () => {
+    return inquirer.prompt([
+        {
+            type: 'input',
+            name: 'project',
+            message: 'What is the name of your project? (Required)',
+        },
+        {
+            type: 'input',
+            name: 'description',
+            message: 'Provide a short description of the project (Required)',
+        },
+        {
+            type: 'checkbox',
+            name: 'languages',
+            message: 'What languages did you use to build this project? (Check all that apply)',
+            choices: ['Javascript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node']
+        },
+        {
+            type: 'input',
+            name: 'installation',
+            message: 'Provide 2 or more steps to install the application'
+        },
+        {
+            type: 'input',
+            name: 'tasks',
+            message: 'What tasks does this application accomplish?'
+        },
+        {
+            type: 'input',
+            name: 'username',
+            message: 'What is the github username associated with this project? (Required)'
+        },
+        {
+            type: 'input',
+            name: 'repo',
+            message: 'What is the name of the repository associated with the project? (Required)'
+        }
+    ]);
 }
-
-fs.writeFile('index.html', generateReadMe(Project, Description), err => {
-    if (err) throw err;
-  
-console.log('Portfolio complete! Check out index.html to see the output!');
-});
