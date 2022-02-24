@@ -1,34 +1,45 @@
-const generateReadMe = () => {
+const checkTable = (contents) => {
+    if (!contents) {
+        return '';
+    }
+    contents.forEach(section => {
+        return `-[${section}](${section})`;
+    });
+}
+
+
+
+const generateReadMe = (data) => {
     return `
     
-#${Project}
+# ${data.project}
+
+
+${checkTable(data.tableContents)}
+
+
 
 ## Description
-${Description}
+${data.description}
 
 ## Programming Languages
-${Languages}
+${data.languages}
 
 ## Installation
-${Installation}
+${data.installation}
 
 ## Tasks Accomplished
-${Tasks}
+${data.tasks}
 
 
 ### URL of the deployed application (GitHub Pages):
-<a href="https://${github}.github.io/${repo}
+<https://${data.username}.github.io/${data.repo}>
 
 
 ### URL of the GitHub repository:
-<a href="https://github.com/${github}/${repo}.git>
+<https://github.com/${data.username}/${data.repo}.git>
     `
 }
 
 module.exports = generateReadMe;
 
-fs.writeFile('index.html', generateReadMe(Project, Description), err => {
-    if (err) throw err;
-  
-console.log('Portfolio complete! Check out index.html to see the output!');
-});
