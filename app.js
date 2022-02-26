@@ -10,6 +10,14 @@ const promptUser = () => {
             type: 'input',
             name: 'project',
             message: 'What is the name of your project? (Required)',
+            validate: nameInput => {
+                if(nameInput) {
+                    return true;
+                } else {
+                    console.log('You need to enter a project name!');
+                    return false;
+                }
+            }
         },
         {
             type: 'list',
@@ -21,6 +29,14 @@ const promptUser = () => {
             type: 'input',
             name: 'description',
             message: 'Provide a short description of the project (Required)',
+            validate: descriptionInput => {
+                if (descriptionInput) {
+                    return true;
+                } else {
+                    console.log('You need to enter a project description!');
+                    return false;
+                }
+            }
         },
         {
             type: 'checkbox',
@@ -31,7 +47,7 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'installation',
-            message: 'Provide 2 or more steps to install the application'
+            message: 'Please provide installation instructions for your application'
         },
         {
             type: 'input',
@@ -47,7 +63,7 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'tests',
-            message: 'Provide testing instructions',
+            message: 'How does the user test this project?',
         },
         {
             type: 'input',
@@ -64,26 +80,39 @@ const promptUser = () => {
             type: 'checkbox',
             name: 'tableContents',
             message: 'Sections do you want include for your table?',
-            choices: ['Description', 'Installation', 'Usage', 'Contribution', 'Testing', 'Tasks'],
+            choices: ['Description', 'Installation', 'Usage', 'Contribution', 'Testing', 'Tasks', 'URL'],
             default: ['Description', 'URL'],
             when: ({ confirmTable }) => confirmTable
-              },
+        },
         {
             type: 'input',
             name: 'username',
-            message: 'What is the github username associated with this project? (Required)'
+            message: 'What is the github username associated with this project? (Required)',
+            validate: userNameInput => {
+                if(userNameInput) {
+                    return true
+                } else {
+                    console.log ('You must enter a github username for this project!')
+                }
+            }
         },
         {
             type: 'input',
             name: 'repo',
-            message: 'What is the name of the repository associated with the project? (Required)'
+            message: 'What is the name of the repository associated with the project? (Required)',
+            validate: repoInput => {
+                if(repoInput) {
+                    return true
+        } else {
+            console.log ('You must enter a github repository associated with this project!')
         }
-    ]);
+    }
 }
+    ]);
+};
 
 const writeToFile = (fileName, data) => {
 return fs.writeFileSync(path.join(process.cwd(), fileName), data);
-
 
 } 
 

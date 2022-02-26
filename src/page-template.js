@@ -14,15 +14,18 @@ const generateReadMe = (data) => {
 
 ## License 
 
+[![License](https://img.shields.io/badge/license-${data.license}-blue.svg)](https://opensource.org/licenses/${data.license})
+
 ## Table of Contents
 ${checkTable(data.tableContents)}
 
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contribution](#contribution)
+- [Contributors](#contribution)
 - [Testing](#testing)
-- [Additional Info](#additional-info)
+- [Tasks](#tasks)
+- [URL](#URL)
 
 ## Description
 ${data.description}

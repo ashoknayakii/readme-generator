@@ -1,30 +1,33 @@
 
     
-# Readme-Generator
+# test
 
 ## License 
+
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Table of Contents
 undefined
 
-- [Description](#description)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contribution](#contribution)
-- [Testing](#testing)
-- [Additional Info](#additional-info)
+- (#description)
+- (#installation)
+- (#usage)
+- (#contribution)
+- (#testing)
+- (#tasks)
+- (#URL)
 
 ## Description
-Dynamically generates a readme using inquirer package and node
+test
 
 ### Programming Languages
-Javascript,HTML,ES6,Node
+
 
 ## Installation
-Install inquirer package from npm and then run node app to fill out all user data
+install npm inquirer
 
 ## Usage
-
+test
 
 ## Contribution
 undefined
@@ -33,13 +36,13 @@ undefined
 undefined
 
 ## Tasks Accomplished
-Provides a professional readme for user projects in markdown format
+test
 
 
 ### URL of the deployed application (GitHub Pages):
-<https://readme-generator.github.io/readme-generator>
+<https://ashoknayakii.github.io/readme-generator>
 
 
 ### URL of the GitHub repository:
-<https://github.com/readme-generator/readme-generator.git>
+<https://github.com/ashoknayakii/readme-generator.git>
     
