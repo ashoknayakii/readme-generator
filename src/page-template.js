@@ -7,26 +7,40 @@ const checkTable = (contents) => {
     });
 }
 
-
-
 const generateReadMe = (data) => {
     return `
     
 # ${data.project}
 
+## License 
 
+## Table of Contents
 ${checkTable(data.tableContents)}
 
-
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contribution](#contribution)
+- [Testing](#testing)
+- [Additional Info](#additional-info)
 
 ## Description
 ${data.description}
 
-## Programming Languages
+### Programming Languages
 ${data.languages}
 
 ## Installation
 ${data.installation}
+
+## Usage
+${data.usage}
+
+## Contribution
+${data.contribution}
+
+## Testing
+${data.testing}
 
 ## Tasks Accomplished
 ${data.tasks}

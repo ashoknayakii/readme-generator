@@ -1,29 +1,45 @@
 
     
-# readme-generator
+# Readme-Generator
 
+## License 
 
+## Table of Contents
 undefined
 
-
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contribution](#contribution)
+- [Testing](#testing)
+- [Additional Info](#additional-info)
 
 ## Description
-readme-generator
+Dynamically generates a readme using inquirer package and node
 
-## Programming Languages
-Javascript,ES6,Node
+### Programming Languages
+Javascript,HTML,ES6,Node
 
 ## Installation
-install the app.js and go to npm to install inquirer
+Install inquirer package from npm and then run node app to fill out all user data
+
+## Usage
+
+
+## Contribution
+undefined
+
+## Testing
+undefined
 
 ## Tasks Accomplished
-Gets user data on each project with inquirer and via a page template creates a throrough readme with the option to add a table of contents
+Provides a professional readme for user projects in markdown format
 
 
 ### URL of the deployed application (GitHub Pages):
-<https://ashoknayakii.github.io/readme-generator>
+<https://readme-generator.github.io/readme-generator>
 
 
 ### URL of the GitHub repository:
-<https://github.com/ashoknayakii/readme-generator.git>
+<https://github.com/readme-generator/readme-generator.git>
     

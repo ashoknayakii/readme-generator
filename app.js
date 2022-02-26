@@ -12,6 +12,12 @@ const promptUser = () => {
             message: 'What is the name of your project? (Required)',
         },
         {
+            type: 'list',
+            name: 'license',
+            message: 'Select a license type if you wish to include one. Arrow keys to move, Enter to select:',
+            choices: ['None', 'MIT', 'GNU GPLv3', 'Mozilla Public 2.0', 'The Unlicense', 'Apache 2.0']
+        },
+        {
             type: 'input',
             name: 'description',
             message: 'Provide a short description of the project (Required)',
@@ -29,6 +35,22 @@ const promptUser = () => {
         },
         {
             type: 'input',
+            name: 'usage',
+            message: 'How do you use this project?'
+        },
+        {
+            type: 'confirm',
+            name: 'contributor',
+            message: 'Would you like others to contribute to your project?',
+            default: false
+        },
+        {
+            type: 'input',
+            name: 'tests',
+            message: 'Provide testing instructions',
+        },
+        {
+            type: 'input',
             name: 'tasks',
             message: 'What tasks does this application accomplish?'
         },
@@ -42,7 +64,7 @@ const promptUser = () => {
             type: 'checkbox',
             name: 'tableContents',
             message: 'Sections do you want include for your table?',
-            choices: ['Javascript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node'],
+            choices: ['Description', 'Installation', 'Usage', 'Contribution', 'Testing', 'Tasks'],
             default: ['Description', 'URL'],
             when: ({ confirmTable }) => confirmTable
               },
@@ -67,6 +89,7 @@ return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 
 const init = () => {
     promptUser().then((userResponse)=> {
+        console.log(userResponse);
 
         writeToFile("readme.md", generateReadMe({...userResponse}));
         
