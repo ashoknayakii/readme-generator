@@ -1,9 +1,9 @@
 const checkTable = (contents) => {
     if (!contents) {
         return '';
-    } 
-        return contents.map(section => {
-        return `-[${section}](${section})`;
+    }
+    return contents.map(section => {
+        return `-[${section}](${section})  \n`;
     }).join("\r\n");
 }
 
@@ -18,6 +18,7 @@ const generateReadMe = (data) => {
 
 ## Table of Contents
 ${checkTable(data.tableContents)}
+
 
 ## Description
 ${data.description}
@@ -48,7 +49,7 @@ ${data.tasks}
 ### URL of the GitHub repository:
 <https://github.com/${data.username}/${data.repo}.git>
     `
-}
+};
 
 module.exports = generateReadMe;
 

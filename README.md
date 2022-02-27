@@ -1,38 +1,46 @@
 
     
-# test
+# Readme-Generator
 
 ## License 
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Table of Contents
--[Description](Description)
--[Installation](Installation)
--[Usage](Usage)
--[Tasks](Tasks)
--[URL](URL)
+-[Description](Description)  
+
+-[Installation](Installation)  
+
+-[Usage](Usage)  
+
+-[Testing](Testing)  
+
+-[Tasks](Tasks)  
+
+-[URL](URL)  
+
+
 
 ## Description
-test
+dynamically generates a readme file in markdown format
 
 ### Programming Languages
 ES6,Node
 
 ## Installation
-test
+install the inquirer package from npm and answer all user input questions when you run node app from the command line
 
 ## Usage
-test
+Use this application on completion of your project
 
 ## Contribution
-undefined
+false
 
 ## Testing
-undefined
+Coming soon.
 
 ## Tasks Accomplished
-test
+A convenient way of quickly drawing up a readme without having to worry about formatting
 
 
 ### URL of the deployed application (GitHub Pages):

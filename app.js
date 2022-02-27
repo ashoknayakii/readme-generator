@@ -23,7 +23,7 @@ const promptUser = () => {
             type: 'list',
             name: 'license',
             message: 'Select a license type if you wish to include one. Arrow keys to move, Enter to select:',
-            choices: ['None', 'MIT', 'GNU GPLv3', 'Mozilla Public 2.0', 'The Unlicense', 'Apache 2.0']
+            choices: ['None', 'MIT', 'GPLv3', 'MPL_2.0', 'Unlicense', 'Apache_2.0']
         },
         {
             type: 'input',
@@ -56,13 +56,13 @@ const promptUser = () => {
         },
         {
             type: 'confirm',
-            name: 'contributor',
+            name: 'contribution',
             message: 'Would you like others to contribute to your project?',
             default: false
         },
         {
             type: 'input',
-            name: 'tests',
+            name: 'testing',
             message: 'How does the user test this project?',
         },
         {
