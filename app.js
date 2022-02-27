@@ -73,7 +73,7 @@ const promptUser = () => {
         {
             type: 'confirm',
             name: 'confirmTable',
-            message:'Would you like a table of contents',
+            message:'Would you like a table of contents?',
             default: true
         },
         {

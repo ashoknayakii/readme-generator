@@ -1,10 +1,10 @@
 const checkTable = (contents) => {
     if (!contents) {
         return '';
-    }
-    contents.forEach(section => {
+    } 
+        return contents.map(section => {
         return `-[${section}](${section})`;
-    });
+    }).join("\r\n");
 }
 
 const generateReadMe = (data) => {
@@ -18,14 +18,6 @@ const generateReadMe = (data) => {
 
 ## Table of Contents
 ${checkTable(data.tableContents)}
-
-- [Description](#description)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributors](#contribution)
-- [Testing](#testing)
-- [Tasks](#tasks)
-- [URL](#URL)
 
 ## Description
 ${data.description}
